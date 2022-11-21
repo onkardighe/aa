@@ -1,3 +1,21 @@
+
+Code Present at : https://snipper.io/s/-MmINyu1JPIMvHwkED1K
+In 1st terminal : 
+npm install ganache web3@1.2.6
+
+ Set-ExecutionPolicy RemoteSigned CurrentUser
+
+./node_modules/.bin/ganache-cli           
+
+In 2nd terminal : 
+ npm install -g http-server
+
+npm install solc@0.6.4
+
+http-server
+
+
+
 node
 Web3=require('web3') 
 web3=new Web3("http://localhost:8545")
