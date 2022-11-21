@@ -1,0 +1,21 @@
+node
+Web3=require('web3') 
+web3=new Web3("http://localhost:8545")
+web3.eth.getAccounts().then(console.log)
+bytecode = fs.readFileSync('./bin/Bank.bin').toString()
+abi = JSON.parse(fs.readFileSync('./bin/Bank.abi').toString())
+deployedContract = new web3.eth.Contract(abi)
+
+
+
+
+
+deployedContract.deploy({
+data: "0x"+bytecode}).send({
+from: '0x399518CF27Aa36fF0F5A6cEA784A50a5d11Ff1B9',
+gas: 1500000,
+gasPrice: web3.utils.toWei('0.00003', 'ether')
+}).then((newContractInstance) => {
+deployedContract.options.address = newContractInstance.options.address
+console.log(newContractInstance.options.address)
+});

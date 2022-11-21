@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+</head>
+<body>
+    <center>
+        <div id="input" style="margin: 10%; padding: 1%; background-color:azure; border-radius: 10px;">
+            <h2>Enter Student Details</h2>
+            <table>
+                <tr>
+                    <td>
+                        Enter Name :
+                    </td>
+                    <td>
+                        <input type="text" id="_n">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Enter Marks :
+                    </td>
+                    <td>
+                        <input type="number" id="_m">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ID : 
+                    </td>
+                    <td>
+                        <input type="number" id="_i">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button id="addStudentData"> Add Student</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <!-- Display -->
+        <div id="output" style="margin: 10%; padding: 1%; background-color:azure; border-radius: 10px;">
+            <h2 id="output-title">Total Students : </h2>
+            <div id="output-data">
+                <table id="student-table">
+
+                </table>
+            </div>
+
+
+        </div>
+    </center>
+    </body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.37/dist/web3.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="index.js"></script>
